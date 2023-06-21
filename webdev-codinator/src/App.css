@@ -1,11 +1,59 @@
-body {
-  /* background-color: #0F151D; */
-  padding: 3rem;
-  /* color: white; */
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Hairline&display=swap');
+
+::selection{
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+} 
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+body {
+  background-color: #0F151D;
+  color: white;
+}
+
+.App{
+  display: flex;
+  flex-direction: column;
+}
+
+.App p{
+  text-align: center;
+  font-family: 'Bungee Hairline', cursive;
+  padding: 10px;
+  font-size: 2rem;
+}
+
 .tab-button-container{
   display: flex;
+  justify-content: center;
+  gap: 20px
 }
+
+.tab-button-container button:focus{
+  color: white;
+  background: black;
+}
+
 .editor-container{
-  padding-top: .4%;
+  flex: 0 1 auto;
 }
+
+.output{
+  text-align: center;
+  padding: 10px;
+}
+
+.resbox{
+  border: 2px solid red;
+  flex: 1 1 auto;
+}
+
+iframe{
+  background: white;
+}
+

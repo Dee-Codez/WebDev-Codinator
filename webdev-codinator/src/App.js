@@ -14,8 +14,11 @@ function App() {
 
 
   const onTabClick = (editorName) => {
+
     setOpenedEditor(editorName);
   };
+
+  // const BtnElList = document.querySelector('Button');
 
   useEffect(() => {
     const timeOut = setTimeout(() => {
@@ -35,15 +38,19 @@ function App() {
 
   return (
     <div className="App">
-      <p>Welcome to the edior</p>
+      <p>CODE-INATOR</p>
       <div className="tab-button-container">
-        <Button title="HTML" onClick={() => {
+        <Button title="HTML" 
+        id={"1"}
+        onClick={() => {
           onTabClick('html')
         }} />
         <Button title="CSS" onClick={() => {
+
           onTabClick('css')
         }} />
         <Button title="JavaScript" onClick={() => {
+
           onTabClick('js')
         }} />
       </div>
@@ -73,15 +80,17 @@ function App() {
           )
         }
       </div>
-      <div>
+      <div className="output">
+        ↓ OUTPUT ↓ 
+      </div>
+      <div className='resbox'>
         <iframe
           id="my_iframe"
           srcDoc={srcDoc}
           title="output"
           sandbox="allow-scripts"
-          frameBorder="1"
           width="100%"
-          height="100%"
+          onload="resizeIframe(this)"
         />
       </div>
     </div>

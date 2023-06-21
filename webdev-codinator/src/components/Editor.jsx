@@ -13,12 +13,13 @@ import 'codemirror/mode/css/css';
 
 import 'codemirror/addon/edit/closebrackets';
 import 'codemirror/addon/edit/closetag';
+import 'codemirror/addon/selection/active-line.js';
 
-import { Controlled as ControlledEditorComponent } from 'react-codemirror2';
+import { Controlled as EditorComponent } from 'react-codemirror2';
 
 
 
-const Editor = ({ language, value, setEditorState }) => {
+const Editor = ({ language, value, setEditorState}) => {
 
   const [theme, setTheme] = useState("dracula")
   const handleChange = (editor, data, value) => {
@@ -29,7 +30,11 @@ const Editor = ({ language, value, setEditorState }) => {
 
   return (
     <div className="editor-container">
-      <div style={{marginBottom: "10px"}}>
+      <div style={{
+        marginBottom: "10px",
+        textAlign: 'center',
+        padding: "20px"
+        }}>
         <label for="cars">Choose a theme: </label>
         <select name="theme" onChange={(el) => {
           setTheme(el.target.value)
@@ -41,7 +46,7 @@ const Editor = ({ language, value, setEditorState }) => {
           }
         </select>
       </div>
-      <ControlledEditorComponent
+      <EditorComponent
         onBeforeChange={handleChange}
         value= {value}
         className="code-mirror-wrapper"
@@ -52,7 +57,8 @@ const Editor = ({ language, value, setEditorState }) => {
           lineNumbers: true,
           theme: theme,
           autoCloseTags: true,
-          autoCloseBrackets: true, 
+          autoCloseBrackets: true,
+          styleActiveLine: true,
         }}
       />
     </div>
