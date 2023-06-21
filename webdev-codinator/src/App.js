@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect } from 'react';
 import './App.css';
 import Button from './components/Button';
 import Editor from './components/Editor';
+// import IframeResizer from 'iframe-resizer-react'
 
 function App() {
 
@@ -14,7 +15,6 @@ function App() {
 
 
   const onTabClick = (editorName) => {
-
     setOpenedEditor(editorName);
   };
 
@@ -32,6 +32,7 @@ function App() {
         `
       )
     }, 250);
+    // var actual_height = {srcDoc}.scrollHeight + "px";
 
     return () => clearTimeout(timeOut)
   }, [html, css, js])
@@ -41,16 +42,18 @@ function App() {
       <p>CODE-INATOR</p>
       <div className="tab-button-container">
         <Button title="HTML" 
-        id={"1"}
+        className={openedEditor === "html" ? "active" : undefined}
         onClick={() => {
           onTabClick('html')
         }} />
-        <Button title="CSS" onClick={() => {
-
+        <Button title="CSS" 
+        className={openedEditor === "css" ? "active" : undefined}
+        onClick={() => {
           onTabClick('css')
         }} />
-        <Button title="JavaScript" onClick={() => {
-
+        <Button title="JavaScript" 
+        className={openedEditor === "js" ? "active" : undefined}
+        onClick={() => {
           onTabClick('js')
         }} />
       </div>
@@ -87,10 +90,12 @@ function App() {
         <iframe
           id="my_iframe"
           srcDoc={srcDoc}
+          style={{
+            minHeight: "23vh",
+          }}
           title="output"
           sandbox="allow-scripts"
           width="100%"
-          onload="resizeIframe(this)"
         />
       </div>
     </div>
