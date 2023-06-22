@@ -14,6 +14,8 @@
 body {
   background-color: #0F151D;
   color: white;
+  height: 100vh;
+  
 }
 
 .App{
@@ -47,11 +49,21 @@ body {
 .resbox{
   width: 100%;
   /* min-height: 20vh; */
+  margin-bottom: auto;
+  height: auto;
 }
 
 iframe{
-  aspect-ratio: 4/3;
+  height: calc(10vw + 20vh + 5vmin);
   background: white;
-  
 }
 
+.credits p{
+  color: white;
+  text-align: center;
+  bottom: 0;
+  right: 10%;
+  left: 10%;
+  padding: 0.6rem;
+  font-size: 1rem;
+}

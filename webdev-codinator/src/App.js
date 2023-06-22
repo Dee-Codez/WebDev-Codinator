@@ -90,13 +90,13 @@ function App() {
         <iframe
           id="my_iframe"
           srcDoc={srcDoc}
-          style={{
-            minHeight: "23vh",
-          }}
           title="output"
           sandbox="allow-scripts"
           width="100%"
         />
+      </div>
+      <div className='credits'>
+        <p>Made With ❤ By DebsPats ©</p>
       </div>
     </div>
   );
