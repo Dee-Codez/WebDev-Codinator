@@ -4,11 +4,11 @@ A Simple WebDev Oriented Online Code Editor With Support for HTML5,CSS3 and Vani
 Deployed At : [CODE-INATOR](https://codinator.netlify.app/)
 ## Screenshots
 <br>
-![image](./screenshot/ss1.png)
+![image](ss1.png)
 
 <br>
 <br>
-![image](./screenshot/ss2.png)
+![image](ss2.png)
 
 
 
