@@ -4,7 +4,8 @@ A Simple WebDev Oriented Online Code Editor With Support for HTML5,CSS3 and Vani
 Deployed At : [CODE-INATOR](https://codinator.netlify.app/)
 ## Screenshots
 <br>
-![ss1](https://github.com/Dee-Codez/WebDev-Codinator/assets/114132607/bc95861d-2589-4621-b5d4-4003e076a100)
+
+![ss1](https://github.com/Dee-Codez/WebDev-Codinator/assets/114132607/ee0ab599-8204-4a3f-917f-79c21119b9d3)
 
 <br>
 <br>
